@@ -1,0 +1,39 @@
+Git when working on the local system uses three sections
+1 Working Directory or Workspace
+2 Stagging Area
+3 Local Repository
+
+Working dir is the fodler where the code is created and intially the files present here are called untracked files
+
+Stagging Area is the intermediated buffer zone of git where the files are temporarly moved into and these files are called indexed files
+
+Local Repository is the location where version controlling happens and files from stagging area are sent into the local repository
+Files present here are called commited files
+
+1 To initilise the working dir as a git repository
+  git init
+  This will create a hidden fodler called .git where it will store   all the configuration that are necessary for git to run
+
+2 To send a files from working dir to stagging area
+  git add filename
+  To send multiple files
+  git add file1 file2 file3
+  To send all the files and folders into the stagging area
+  git add .
+  Note . represents present working directory
+
+3 To bring files back from stagging area to untracked section
+  git rm --cached filename
+  (or)
+  git reset filename
+
+4 To send files from stagging area to local repository
+  git commit -m "Some message"
+
+5 To see the status of the untracked section and stagging area
+  git status
+
+6 To see the list of commits or commit history
+  git log
+  To see the commit history in shortend format
+  git log --oneline

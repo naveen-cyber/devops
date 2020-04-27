@@ -1,0 +1,156 @@
+.gitignore
+=================
+This is a special configuration hidden file which is used for storing private files info.Any file whose name is mentioned in .gitignore cannot be further accesed by git
+
+1 Create few empty file
+  touch file1 file2 file3 file4 file5
+
+2 Check the status of git
+  git status
+  It will show all the above 5 files as untracked files
+
+3 Create .gitignore and store the above 5 filenames in it
+  cat > .gitignore
+  file1
+  file2
+  file3
+  file4
+  file5
+  To come out of cat command ctrl+d (EOF)
+
+4 Check the status of git
+  git status
+  It will not show any info about file1-file5
+
+=========================================================
+Branching in Git
+=================
+This is a feature of git which allows us to create code related to various functionalities on differnet branches and later merge them with the master branch.The default branch of git is called master branch
+
+1 To see the the list of branches
+  git  branch
+  To see the list of all the branches (local and remote)
+  git branch -a
+
+2 To create branch
+  git branch branch_name
+
+3 To move into a branch
+  git checkout branch_name
+
+4 To create a branch and also move into it
+  git checkout -b branch_name
+
+5 To merge a branch
+  git merge branch_name
+
+6 To delete a branch that is merged
+  git branch -d branch_name
+  This is also called as soft delete
+
+7 To delete a branch that is not merged
+  git branch -D branch_name
+  This is called as hard delete
+
+============================================================
+Note: Whenever a branch is created the entire commit history
+of the parent branch gets copied into the newly created branch
+
+Note: Irresepective of where a file is created or modified git only considers from whcih branch it is commited and that file belongs only to that branch
+
+Working on Remote git repository
+=====================================
+1 Open github.com
+2 Signup for a free account
+3 Signin into that account
+
+
+Pushing code into remote github
+===================================
+1 Open github.com
+2 Sigin into our account
+3 Click on + on top right corner
+4 Click on New Reposiotry
+5 Enter some reposiotry name
+6 Select Public--->Click on Create repository
+7 Go to "push an exisiting reposiotry from command line"
+  Copy the 1st command 
+  This will create a link between the local repository and remote
+  reposiotry
+8 Copy the send command and paste in git bash
+  git push -u origin master
+  Enter username and password of github
+
+This is also called as checkin
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
