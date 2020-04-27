@@ -1,0 +1,63 @@
+
+
+vagrant init ubuntu/trusty64
+
+
+ 
+1. vagrant init
+2. sudo nano Vagrantfile
+3. Press Ctrl+o (to save) and then Ctrl+x (to exit)
+4. vagrant up
+5. vagrant ssh lb1
+6. vagrant ssh web1
+7. vagrant ssh web2
+ 
+Here is the snippet of code I write in the Vagrant file:
+ 
+config.vm.define "lb1" do |lb1|
+ lb1.vm.box = "ubuntu/trusty64"
+end
+  
+config.vm.define "web1" do |web1|
+ web1.vm.box = "ubuntu/trusty64"
+end
+  
+config.vm.define "web2" do |web2|
+ web2.vm.box = "ubuntu/trusty64"
+end
+
+
+# vagrant ssh ansb1
+
+==================================
+
+  # setting multimachine for ansible lab
+  config.vm.define "ansb1" do |ansb1|
+   ansb1.vm.box = "ubuntu/trusty64"
+  end
+
+  config.vm.define "ansb2" do |ansb2|
+   ansb2.vm.box = "ubuntu/trusty64"
+  end
+
+  config.vm.define "ansb3" do |ansb3|
+   ansb3.vm.box = "ubuntu/trusty64"
+  end
+
+  
+You can run any normal vagrant command with each machine such as:
+ 
+- vagrant ssh lb1
+- vagrant halt web2
+- vagrant up web2
+
+
+ config.vm.network "private_network", ip: "10.0.0.8"
+
+config.vm.network "forwarded_port", guest: 80, host: 8089
+
+config.vm.box = "ubuntu/trusty64"
+
+config.vm.network "private_network", type: "dhcp"
+
+config.vm.network "private_network", ip: "10.0.0.10"
