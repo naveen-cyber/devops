@@ -15,7 +15,7 @@ VCS's are classified into 2 type
 1 Centralised Version Controlling
 2 Distributed Version Controlling
 
-Centralised Version Controlling
+Centralised Version Controlling concept:
 ==================================
 Here we have a remote server where version controlling happens.All the team
 members simple checkin their code into this remote server.Only in the remote server version controlling happens
